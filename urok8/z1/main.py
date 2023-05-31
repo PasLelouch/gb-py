@@ -8,7 +8,6 @@ def show_data(filename):
     with open(filename, "r", encoding="utf-8") as data:
         print(data.read())
     print("")
-
 # Записывает информацию в файл
 def export_data(filename):
     with open(filename, "r", encoding="utf-8") as data:
@@ -19,7 +18,6 @@ def export_data(filename):
         phone_number = input("Введите номер телефона: ")
         data.write(f"{num} | {fio} | {phone_number}\n")
         print(f"Добавлена запись : {num} | {fio} | {phone_number}\n")
-
 # Изменяет информацию из файла
 def edit_data(filename):
     print("\nПП | ФИО | Телефон")
@@ -43,7 +41,6 @@ def edit_data(filename):
     print(f"Запись - {edit_tel_book_lines}, изменена на - {edited_line}\n")
     with open(filename, "w", encoding='utf-8') as f:
         f.write("\n".join(tel_book_lines))
-
 # Удаляет информацию из файла
 def delete_data(filename):
     print("\nПП | ФИО | Телефон")
@@ -58,7 +55,6 @@ def delete_data(filename):
     print(f"Удалена запись: {del_tel_book_lines}\n")
     with open(filename, "w", encoding='utf-8') as data:
         data.write("\n".join(tel_book_lines))
-
 def main():
     my_choice = -1
     file_tel = "tel.txt"
